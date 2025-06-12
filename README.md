@@ -1,7 +1,7 @@
 # PESASA
 
 A full-stack web application with separate frontend and backend architecture.
-i have seperated the frontend code into its folder and the backend logic in its folder for beetter maintainability and scalability.
+I have seperated the frontend code into its folder and the backend logic in its folder for beetter maintainability and scalability.
 
 ## Project Structure
 
