@@ -93,6 +93,7 @@ app.post('/api/auth/register', async (req, res) => {
         location: true,
         industry: true,
         createdAt: true,
+        updatedAt: true,
       }
     });
 
