@@ -217,6 +217,15 @@ function authenticateToken(req, res, next) {
   });
 }
 
+// Health check endpoint for Docker
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'healthy', 
+    timestamp: new Date().toISOString(),
+    service: 'pesasa-backend'
+  });
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);

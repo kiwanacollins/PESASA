@@ -11,7 +11,12 @@
     "frontend:build": "cd frontend && npm run build",
     "frontend:preview": "cd frontend && npm run preview",
     "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down && docker system prune -f"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

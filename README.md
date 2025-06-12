@@ -1,6 +1,7 @@
 # PESASA
 
 A full-stack web application with separate frontend and backend architecture.
+i have seperated the frontend code into its folder and the backend logic in its folder for beetter maintainability and scalability.
 
 ## Project Structure
 
@@ -22,6 +23,44 @@ npm run install:all
 2. Start both frontend and backend in development mode:
 ```bash
 npm run dev
+```
+
+This will start:
+- Backend API on http://localhost:3001
+- Frontend application on http://localhost:5173
+
+## 🐳 Docker Setup (Production)
+
+For production deployment using Docker, see our [Docker Guide](./DOCKER_README.md).
+
+### Quick Production Deployment
+
+```bash
+# Production deployment
+./docker-start.sh
+```
+
+Docker services will be available at:
+- **Frontend**: http://localhost
+- **Backend API**: http://localhost:3001
+
+### Available Docker Commands
+
+```bash
+npm run docker:up          # Start production containers
+npm run docker:down        # Stop containers
+npm run docker:logs        # View logs
+npm run docker:prod        # Start production containers (explicit)
+npm run docker:clean       # Clean up containers and images
+```
+
+### Local Development (Recommended)
+
+For local development, use the native setup without Docker:
+
+```bash
+npm run install:all        # Install all dependencies
+npm run dev                # Start both frontend and backend
 ```
 
 This will start:
@@ -83,3 +122,4 @@ The application uses concurrently to run both frontend and backend simultaneousl
 For detailed information about each part of the application, see:
 - [Frontend README](./frontend/README.md)
 - [Backend README](./backend/README.md)
+- [Docker Setup Guide](./DOCKER_README.md)
